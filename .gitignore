@@ -1,5 +1,6 @@
 
-target/
+target/*
+!target/compiled
 
 logs
 
@@ -7,3 +8,8 @@ logs
 
 dbt_modules
 dbt_packages
+
+venv/
+
+*.duckdb
+.user.yml

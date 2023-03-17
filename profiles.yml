@@ -1,0 +1,22 @@
+dbtvault_snowflake_demo:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <bu77777.eu-west-1>
+
+      user: <myusername>
+      password: <mypassword>
+
+      role: <SYSADMIN>
+      database: DV_PROTOTYPE_DB
+      warehouse: DV_PROTOTYPE_WH
+      schema: DEMO
+      threads: 4
+      client_session_keep_alive: False
+duckdb:
+  outputs:
+   dev:
+     type: duckdb
+     path: /workspaces/dbtvault-snowflakeDemo/tpch_vault.duckdb
+  target: dev
